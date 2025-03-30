@@ -1,0 +1,15 @@
+/* index.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eaeaea;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  padding: 1rem;
+}

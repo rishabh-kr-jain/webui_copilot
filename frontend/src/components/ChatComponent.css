@@ -1,0 +1,41 @@
+/* ChatComponent.css */
+.chat-component {
+  background-color: #fff;
+  padding: 1rem;
+  margin: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-component form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-component input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.chat-component button {
+  background-color: #3498db;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-component button:hover {
+  background-color: #2980b9;
+}
+
+.chat-response {
+  margin-top: 1rem;
+  background-color: #f4f6f8;
+  padding: 1rem;
+  border-radius: 4px;
+}

@@ -1,0 +1,118 @@
+/* Dashboard.css */
+
+/* Container with sidebar + main content side by side */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Hide radio buttons visually (but keep them in the DOM for toggling) */
+.visually-hidden {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ----- SIDEBAR ----- */
+.sidebar {
+  width: 240px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.icon-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.icon-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  color: #333;
+  font-weight: 500;
+}
+
+.icon-label i {
+  font-size: 1.2rem;
+}
+
+.icon-label:hover {
+  background-color: #e2e2e2;
+}
+
+.history-section {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+/* ----- MAIN CONTENT AREA ----- */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.main-header {
+  background-color: #e9ecef;
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+/* The container for all widget panels */
+.results-container {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+/* Each panel is initially hidden. We'll show them via radio-button logic. */
+.panel {
+  display: none;
+  position: absolute;
+  inset: 0; /* top:0, right:0, bottom:0, left:0 */
+  background-color: #fff;
+  overflow-y: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* The chat box at the bottom of the main content. */
+.chat-box {
+  border-top: 1px solid #ddd;
+  padding: 1rem;
+}
+
+/* ----- TOGGLE LOGIC VIA RADIO BUTTONS ----- */
+
+/* Show GDP panel if #radio-gdp is checked */
+#radio-gdp:checked ~ .main-content .results-container .panel-gdp {
+  display: block;
+}
+
+/* Show CO2 panel if #radio-co2 is checked */
+#radio-co2:checked ~ .main-content .results-container .panel-co2 {
+  display: block;
+}
+
+/* Show Agriculture panel if #radio-agri is checked */
+#radio-agri:checked ~ .main-content .results-container .panel-agri {
+  display: block;
+}
